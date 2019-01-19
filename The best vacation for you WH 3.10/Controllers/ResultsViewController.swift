@@ -9,6 +9,12 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
+    
+    var answers: [Answer]? {
+        didSet {
+            print(#function, answers ?? "nil")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
