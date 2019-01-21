@@ -28,6 +28,12 @@ struct Answer {
 }
 
 
+
+
+//var string = "Google"
+//var attributedString = NSMutableAttributedString(string: string, attributes:[NSAttributedString.Key.link: URL(string: "http://www.google.com")!])
+// yourTextView.attributedText = attributedString
+
 enum VacationType: Character {
     case home = "🎮", bar = "🍻", bitch = "☀️", sport = "🚴‍♀️"
     
@@ -41,6 +47,20 @@ enum VacationType: Character {
             return "Отдых на белом песке под палящим солнцем зарядит вас на год вперед!"
         case .sport:
             return "Только максимальная активность полностью снимет стресс!"
+        }
+    }
+    
+    
+    var linkVacation: String {
+        switch self {
+        case .home:
+            return "Купить PS 4: https://www.mvideo.ru/playstation/ps4-konsoli-4333"
+        case .bar:
+            return "Сходить в бар: https://pigandrose.me/rus/"
+        case .bitch:
+            return "Поехать на море: https://tours.tutu.ru/indonesia/bali/iz/491_moskva/"
+        case .sport:
+            return "Выбрать активность: http://semenovclub.ru"
         }
     }
 }

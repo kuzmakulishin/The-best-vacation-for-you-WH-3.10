@@ -130,6 +130,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ruG-dO-dn1">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -144,6 +145,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Fv-0i-a3s">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -158,6 +160,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yWN-u1-ePv">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -172,6 +175,7 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-jJ-oMd">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -277,10 +281,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecK-v5-yDj">
+                                <rect key="frame" x="40" y="458" width="240" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.81392479240000004" blue="0.73457378620000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="WbR-cT-enY"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="suG-fb-iOq">
-                                <rect key="frame" x="20" y="167" width="280" height="234.5"/>
+                                <rect key="frame" x="20" y="118" width="280" height="234.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎮" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da2-p1-ljV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="🎮" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da2-p1-ljV">
                                         <rect key="frame" x="75" y="0.0" width="130" height="143.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="120"/>
                                         <nil key="textColor"/>
@@ -297,9 +310,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.81392479235219706" blue="0.73457378624454284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="suG-fb-iOq" firstAttribute="centerY" secondItem="Uq8-XM-91N" secondAttribute="centerY" id="Ri3-rh-fds"/>
+                            <constraint firstItem="ecK-v5-yDj" firstAttribute="leading" secondItem="f5Z-eK-WIB" secondAttribute="leading" constant="40" id="G3y-EH-jeT"/>
+                            <constraint firstItem="suG-fb-iOq" firstAttribute="centerY" secondItem="Uq8-XM-91N" secondAttribute="centerY" constant="-48.75" id="Ri3-rh-fds"/>
                             <constraint firstItem="suG-fb-iOq" firstAttribute="leading" secondItem="Uq8-XM-91N" secondAttribute="leading" constant="20" id="Xsy-4t-TRg"/>
                             <constraint firstAttribute="trailing" secondItem="suG-fb-iOq" secondAttribute="trailing" constant="20" id="hyZ-f9-3xH"/>
+                            <constraint firstItem="f5Z-eK-WIB" firstAttribute="bottom" secondItem="ecK-v5-yDj" secondAttribute="bottom" constant="40" id="rYR-Yk-NJK"/>
+                            <constraint firstItem="f5Z-eK-WIB" firstAttribute="trailing" secondItem="ecK-v5-yDj" secondAttribute="trailing" constant="40" id="yBP-Xo-nu7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f5Z-eK-WIB"/>
                     </view>
@@ -311,13 +327,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="findVacation" destination="ecK-v5-yDj" id="XWg-KX-sLh"/>
                         <outlet property="resultLabel" destination="da2-p1-ljV" id="x82-ol-rfb"/>
                         <outlet property="resultTextLabel" destination="qdv-eF-wIg" id="aeJ-Mt-lYl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9l8-In-etd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="-64"/>
+            <point key="canvasLocation" x="1638.75" y="-64.436619718309856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ow-3v-Bls">

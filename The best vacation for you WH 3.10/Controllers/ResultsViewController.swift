@@ -12,6 +12,7 @@ class ResultsViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var resultTextLabel: UILabel!
+    @IBOutlet weak var findVacation: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,9 @@ class ResultsViewController: UIViewController {
         
         resultLabel.text = "\(mostCommonAnswer.rawValue)"
         resultTextLabel.text = mostCommonAnswer.definition
+        findVacation.text = mostCommonAnswer.linkVacation
     }
+    
+    
 
 }
