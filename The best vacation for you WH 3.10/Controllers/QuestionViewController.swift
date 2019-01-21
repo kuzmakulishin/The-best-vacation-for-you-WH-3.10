@@ -152,6 +152,22 @@ class QuestionViewController: UIViewController {
     }
     */
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultsSegue" {
+            let resultsViewController = segue.destination as! ResultsViewController
+            resultsViewController.answers = answersChosen
+        }
+    }
+    
+    
+    /*
+     1) нужно раскомментировать препере и проверить что сегвей.индификатор = резалт сегвею
+     2) взять segue.destination проверить, что он конвертируется в резал вью контроллер
+     3) взять, что у нас сконвертировалось, взять свойсво ансверс и присвоить ему ансвер answersChosen
+     4) после этого можно работать на третьем экране
+     
+     */
+    
     @IBAction func singleButtonPressed(_ sender: UIButton) {
         let answers = questions[questionIndex].answers
         

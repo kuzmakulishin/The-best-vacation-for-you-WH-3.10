@@ -10,27 +10,35 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    var answers: [Answer]? {
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultTextLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        calculatePersonResult()
+    }
+    
+    var answers: [Answer]! {
         didSet {
             print(#function, answers ?? "nil")
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func calculatePersonResult() {
+        var frequencyOfAnswers: [VacationType: Int] = [:]
+        let responseTypes = answers.map { $0.type }
+        
+        for response in responseTypes {
+            frequencyOfAnswers[response] = (frequencyOfAnswers[response] ?? 0) + 1
+        }
+    
+        
+        let mostCommonAnswer = frequencyOfAnswers.sorted { $0.1 > $1.1 }.first!.key
+        
+        resultLabel.text = "\(mostCommonAnswer.rawValue)"
+        resultTextLabel.text = mostCommonAnswer.definition
     }
-    */
 
 }
