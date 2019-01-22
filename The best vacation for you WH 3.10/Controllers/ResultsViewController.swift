@@ -25,9 +25,10 @@ class ResultsViewController: UIViewController {
             print(#function, answers ?? "nil")
         }
     }
-    
+    // получается главный секрет в том, что у нас порядок типов животных соответствуюет типу ответов, в противном случае .map бы тут не подошел?
     
     func calculatePersonResult() {
+        // создаем словарь, где ключ, это тим отдыха а значение количество голосов на него
         var frequencyOfAnswers: [VacationType: Int] = [:]
         let responseTypes = answers.map { $0.type }
         
